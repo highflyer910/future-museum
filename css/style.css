@@ -733,3 +733,46 @@ footer {
   .stats-bar { flex-wrap: wrap; }
   .stat-item { min-width: 100px; }
 }
+
+@media (max-width: 480px) {
+  .lightbox {
+    margin: 1rem auto;
+    width: 100%;
+  }
+
+  .lightbox-overlay {
+    padding: 0.75rem;
+  }
+
+  .lightbox-header {
+    padding: 1.5rem;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .lightbox-body {
+    padding: 1.5rem;
+  }
+
+  .guestbook {
+    padding: 1.5rem;
+  }
+
+  .guestbook-compose {
+    flex-direction: column;
+  }
+
+  .guestbook-input {
+    border-right: 1px solid rgba(212,169,106,0.2);
+    border-bottom: none;
+  }
+
+  .guestbook-submit {
+    padding: 12px;
+    text-align: center;
+  }
+
+  .lightbox-title {
+    font-size: 1.6rem;
+  }
+}

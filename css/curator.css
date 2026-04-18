@@ -139,7 +139,6 @@
 .curator-msg-bubble {
   max-width: 85%;
   padding: 10px 14px;
-  font-family: 'Cormorant Garamond', serif;
   font-size: 1rem;
   line-height: 1.65;
   border-radius: 5px;
@@ -257,7 +256,7 @@
 }
 
 .curator-suggestion {
-  font-size: 9px;
+  font-size: 12px;
   letter-spacing: 0.1em;
   color: var(--ash);
   border: 1px solid rgba(212,169,106,0.18);

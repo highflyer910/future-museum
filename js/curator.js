@@ -3,7 +3,6 @@
     "What was the last monarch butterfly sighting?",
     "How did humans react when the reef died?",
     "When did the last tiger die?",
-    "What is the archive's oldest record?",
   ];
 
   let isOpen = false;

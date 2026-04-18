@@ -3,7 +3,7 @@
 > *It is the year 2100. You are standing in a digital archive built by those who remembered.*
 > *This is what they chose to preserve.*
 
-**[→ Visit the Museum](https://museumofuture.vercel.app/)**
+**[→ Visit the Museum](https://anthropocene-archive.vercel.app/)**
 
 Built for the [DEV Earth Day Challenge 2026](https://dev.to/challenges/weekend-2026-04-16) - a contemplative digital museum set in the year 2100, where the exhibits are the species, places, sounds, and sensations that humanity lost during the Anthropocene. Visitors can nominate what *they* are afraid we will lose, and an AI curator - powered by Google Gemini - writes a scientifically-grounded permanent exhibit for each one.
 
