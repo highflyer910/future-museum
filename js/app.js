@@ -285,6 +285,7 @@ function openExhibit(id) {
   const overlay = document.getElementById("lightbox-overlay");
   overlay.classList.add("open");
   overlay.scrollTop = 0;
+  if (window.setCuratorContext) window.setCuratorContext(e.name);
   document.body.style.overflow = "hidden";
 
   setTimeout(() => {
@@ -323,6 +324,7 @@ function closeLightboxBtn() {
   setTimeout(() => {
     document.getElementById("lightbox-overlay").classList.remove("open");
     document.body.style.overflow = "";
+    if (window.setCuratorContext) window.setCuratorContext(null); 
   }, 300);
 }
 

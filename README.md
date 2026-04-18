@@ -27,10 +27,12 @@ The Gemini integration isn't decorative. When a visitor nominates something, *"t
 ---
 
 ## How the Gemini Integration Works
-
-A visitor types anything: a word, a phrase, a short sentence. *"Fireflies."* *"The sound of my grandmother's forest."* Gemini receives that as a nomination and generates a full museum exhibit: a name, an era, a conservation status, a short description, a longer archival story, and category tags.
-
-The result renders as a new card in the gallery, permanent for the session.
+ 
+### Nominate an exhibit
+A visitor types anything — a word, a phrase, a short sentence. *"Fireflies."* *"The sound of my grandmother's forest."* Gemini receives that as a nomination and generates a full museum exhibit: a name, an era, a conservation status, a short description, a longer archival story, and category tags. The result renders as a new card in the gallery, permanent for the session.
+ 
+### Ask the Curator
+A floating button — *🏛 Ask the Curator* — opens a conversation with the museum's archivist. It is the year 2100. The curator has kept these records for years and speaks entirely in the past tense, because everything is already gone. Ask what the last monarch butterfly sighting looked like. Ask how humans reacted when the reef died. Ask what a dawn chorus sounded like.
 
 ---
 

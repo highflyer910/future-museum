@@ -1,0 +1,293 @@
+.curator-fab {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 400;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--bark);
+  border: 1px solid rgba(212,169,106,0.35);
+  color: var(--sand);
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: background 0.3s, border-color 0.3s, transform 0.2s;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.5);
+  border-radius: 5px;
+}
+
+.curator-fab:hover {
+  background: rgba(74,46,26,0.95);
+  border-color: var(--sand);
+  transform: translateY(-2px);
+}
+
+.curator-fab-icon {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.curator-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(26,18,8,0.85);
+  z-index: 600;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 2rem;
+}
+
+.curator-overlay.open {
+  display: flex;
+}
+
+.curator-modal {
+  width: 100%;
+  max-width: 480px;
+  background: var(--bark);
+  border: 1px solid rgba(212,169,106,0.25);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  max-height: 70vh;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.curator-modal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.curator-header {
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid rgba(212,169,106,0.15);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.curator-header-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--sand);
+  margin-bottom: 0.2rem;
+}
+
+.curator-header-sub {
+  font-size: 9px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--ash);
+}
+
+.curator-close {
+  background: none;
+  border: none;
+  color: var(--ash);
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 0.2s;
+  white-space: nowrap;
+  padding: 0;
+  margin-top: 2px;
+}
+
+.curator-close:hover { color: var(--parchment); }
+
+.curator-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--clay) transparent;
+}
+
+.curator-messages::-webkit-scrollbar { width: 3px; }
+.curator-messages::-webkit-scrollbar-thumb { background: var(--clay); }
+
+.curator-msg {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.curator-msg.visitor {
+  align-items: flex-end;
+}
+
+.curator-msg.curator {
+  align-items: flex-start;
+}
+
+.curator-msg-bubble {
+  max-width: 85%;
+  padding: 10px 14px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  line-height: 1.65;
+  border-radius: 5px;
+}
+
+.curator-msg.visitor .curator-msg-bubble {
+  background: rgba(212,169,106,0.12);
+  border: 1px solid rgba(212,169,106,0.2);
+  color: var(--parchment);
+  font-style: normal;
+}
+
+.curator-msg.curator .curator-msg-bubble {
+  background: rgba(26,18,8,0.5);
+  border: 1px solid rgba(212,169,106,0.1);
+  border-left: 2px solid rgba(212,169,106,0.35);
+  color: var(--bone);
+  font-style: italic;
+}
+
+.curator-msg-label {
+  font-size: 8px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ash);
+  padding: 0 4px;
+}
+
+.curator-thinking {
+  display: none;
+  align-items: center;
+  gap: 10px;
+  padding: 0 2rem 1rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--ash);
+  flex-shrink: 0;
+}
+
+.curator-thinking.visible { display: flex; }
+
+.curator-thinking-dots span {
+  display: inline-block;
+  width: 4px; height: 4px;
+  background: var(--amber);
+  border-radius: 50%;
+  margin: 0 2px;
+  animation: dot-pulse 1.4s ease-in-out infinite;
+}
+.curator-thinking-dots span:nth-child(2) { animation-delay: 0.2s; }
+.curator-thinking-dots span:nth-child(3) { animation-delay: 0.4s; }
+
+.curator-compose {
+  padding: 1rem 2rem 1.5rem;
+  border-top: 1px solid rgba(212,169,106,0.15);
+  display: flex;
+  gap: 0;
+  flex-shrink: 0;
+}
+
+.curator-input {
+  flex: 1;
+  background: rgba(26,18,8,0.6);
+  border: 1px solid rgba(212,169,106,0.25);
+  border-right: none;
+  color: var(--parchment);
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1rem;
+  padding: 10px 14px;
+  outline: none;
+  transition: border-color 0.3s;
+  resize: none;
+  border-radius: 5px 0 0 5px;
+}
+
+.curator-input:focus { border-color: rgba(212,169,106,0.55); }
+.curator-input::placeholder { color: var(--ash); }
+.curator-input:disabled { opacity: 0.5; }
+
+.curator-send {
+  background: var(--amber);
+  border: 1px solid var(--amber);
+  color: var(--ink);
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 10px 18px;
+  cursor: pointer;
+  transition: background 0.25s, border-color 0.25s;
+  white-space: nowrap;
+  border-radius: 0 5px 5px 0;
+}
+
+.curator-send:hover:not(:disabled) {
+  background: var(--sand);
+  border-color: var(--sand);
+}
+
+.curator-send:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* Suggested questions */
+.curator-suggestions {
+  padding: 0 2rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.curator-suggestion {
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: var(--ash);
+  border: 1px solid rgba(212,169,106,0.18);
+  padding: 5px 10px;
+  background: transparent;
+  cursor: pointer;
+  font-family: 'Josefin Sans', sans-serif;
+  transition: color 0.2s, border-color 0.2s;
+  text-align: left;
+}
+
+.curator-suggestion:hover {
+  color: var(--sand);
+  border-color: rgba(212,169,106,0.4);
+}
+
+@media (max-width: 600px) {
+  .curator-overlay {
+    padding: 0;
+    align-items: flex-end;
+  }
+  .curator-modal {
+    max-width: 100%;
+    max-height: 80vh;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+  }
+  .curator-fab {
+    bottom: 1.5rem;
+    right: 1rem;
+  }
+}
