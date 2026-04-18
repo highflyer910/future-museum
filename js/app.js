@@ -7,7 +7,7 @@ const SEED_EXHIBITS = [
     longDesc: "Stretching 2,300 kilometres along the Australian coast, the reef once sheltered over 1,500 species of fish and 4,000 types of mollusc. Bleaching events, driven by waters growing warmer each decade, have stripped entire regions of their colour and life. Scientists who have studied it for a lifetime now speak of it in the past tense.",
     tags: ["coral","biodiversity","1,500 species"], aiGenerated: false,
     messages: [
-      { author: "M. Torres", text: "I dove here in 2019. Even then, the silence underwater was wrong — too few fish, too much white." }
+      { author: "M. Torres", text: "I dove here years ago. Even then, the silence underwater was wrong — too few fish, too much white." }
     ]
   },
   {
@@ -50,7 +50,7 @@ const SEED_EXHIBITS = [
     id: "s6", icon: "🎵", name: "The dawn chorus", era: "Fading: present",
     cat: "sensation", status: "endangered",
     shortDesc: "The hour before sunrise when every bird sang at once.",
-    longDesc: "The dawn chorus — that layered explosion of birdsong in the thirty minutes before sunrise — has grown measurably quieter within a single human lifetime. North America alone has lost three billion birds since 1970. The specific acoustic texture of a spring morning that your grandparents knew — that particular fullness of sound — does not exist in the same form today. It is leaving slowly, in the way that light leaves a room.",
+    longDesc: "The dawn chorus — that layered explosion of birdsong in the thirty minutes before sunrise — has grown measurably quieter within a single human lifetime. North America alone has lost three billion birds since 1970. The specific acoustic texture of a spring morning that your grandparents knew, that particular fullness of sound — does not exist in the same form today. It is leaving slowly, in the way that light leaves a room.",
     tags: ["birdsong","soundscape","3 billion birds lost"], aiGenerated: false,
     messages: [
       { author: "P. Sharma", text: "My father used to wake at 5am just to listen. He said it was better than any music." }
@@ -60,7 +60,7 @@ const SEED_EXHIBITS = [
     id: "s7", icon: "🌊", name: "Vaquita porpoise", era: "Lost: ~2026",
     cat: "ocean", status: "lost",
     shortDesc: "The smallest cetacean — fewer individuals than a family.",
-    longDesc: "Native only to a small region of the northern Gulf of California, the vaquita is the world's most critically endangered marine mammal — and almost certainly its most recent cetacean extinction. Fewer than ten are believed to survive. They die as bycatch in gillnets set for the totoaba fish, whose swim bladder is smuggled to China for supposed medicinal value. No recovery effort has succeeded. The species is functionally gone.",
+    longDesc: "Native only to a small region of the northern Gulf of California, the vaquita is the world's most critically endangered marine mammal, and almost certainly its most recent cetacean extinction. Fewer than ten are believed to survive. They die as bycatch in gillnets set for the totoaba fish, whose swim bladder is smuggled to China for supposed medicinal value. No recovery effort has succeeded. The species is functionally gone.",
     tags: ["Mexico","porpoise","bycatch"], aiGenerated: false,
     messages: []
   },
@@ -68,7 +68,7 @@ const SEED_EXHIBITS = [
     id: "s8", icon: "🌿", name: "Old-growth silence", era: "Lost: ongoing",
     cat: "sensation", status: "lost",
     shortDesc: "The particular quiet found only inside ancient forests.",
-    longDesc: "There is a quality of silence in an old-growth forest that cannot be replicated — a density of life so complete that it absorbs sound, returns it changed, holds centuries of growth in the texture of the air. Less than 5% of the world's original old-growth forests remain unlogged. The rest have been replaced with plantations, farms, and roads. You cannot hear what once lived there.",
+    longDesc: "There is a quality of silence in an old-growth forest that cannot be replicated - a density of life so complete that it absorbs sound, returns it changed, holds centuries of growth in the texture of the air. Less than 5% of the world's original old-growth forests remain unlogged. The rest have been replaced with plantations, farms, and roads. You cannot hear what once lived there.",
     tags: ["old-growth","acoustic ecology","5% remaining"], aiGenerated: false,
     messages: []
   },
@@ -76,7 +76,7 @@ const SEED_EXHIBITS = [
     id: "s9", icon: "🐢", name: "Yangtze giant softshell turtle", era: "Lost: ~2025",
     cat: "land", status: "lost",
     shortDesc: "Only three individuals remain on Earth.",
-    longDesc: "Once common in China's Yangtze River and Vietnam's lakes, the world's largest freshwater turtle now exists only as three known individuals — two in Chinese zoos and one wild turtle in a Vietnamese lake. The last confirmed female died in 2019 during an artificial insemination attempt. Without a viable pair, the species is functionally extinct, a slow death measured in decades rather than years.",
+    longDesc: "Once common in China's Yangtze River and Vietnam's lakes, the world's largest freshwater turtle now exists only as three known individuals - two in Chinese zoos and one wild turtle in a Vietnamese lake. The last confirmed female died in 2019 during an artificial insemination attempt. Without a viable pair, the species is functionally extinct, a slow death measured in decades rather than years.",
     tags: ["freshwater","China","3 remaining"], aiGenerated: false,
     messages: []
   },
@@ -92,7 +92,7 @@ const SEED_EXHIBITS = [
     id: "s11", icon: "🦋", name: "Xerces blue butterfly", era: "Lost: 1941",
     cat: "sky", status: "lost",
     shortDesc: "The first American butterfly lost to urban sprawl.",
-    longDesc: "Once abundant in the sand dunes of San Francisco's Golden Gate headlands, the Xerces blue vanished as its habitat was consumed by city expansion. The last specimens were collected in 1941. It became the first butterfly in the United States driven to extinction by human development — not by pesticides or climate change, but simply by having nowhere left to live.",
+    longDesc: "Once abundant in the sand dunes of San Francisco's Golden Gate headlands, the Xerces blue vanished as its habitat was consumed by city expansion. The last specimens were collected in 1941. It became the first butterfly in the United States driven to extinction by human development, not by pesticides or climate change, but simply by having nowhere left to live.",
     tags: ["insect","California","urban extinction"], aiGenerated: false,
     messages: []
   },
@@ -100,7 +100,7 @@ const SEED_EXHIBITS = [
     id: "s12", icon: "🍄", name: "Lost fungal lineages", era: "Fading: present",
     cat: "land", status: "endangered",
     shortDesc: "The invisible network that forests breathe through.",
-    longDesc: "Fungi are the least-documented kingdom of life — over 90% of species remain undescribed. Yet each year, old-growth forests are logged before their mycorrhizal networks are even named. Unlike animals, a fungus can vanish without a single photograph, an extinction that leaves no trace in the public record. Scientists estimate dozens of fungal species are lost annually, unseen and unmourned.",
+    longDesc: "Fungi are the least-documented kingdom of life, over 90% of species remain undescribed. Yet each year, old-growth forests are logged before their mycorrhizal networks are even named. Unlike animals, a fungus can vanish without a single photograph, an extinction that leaves no trace in the public record. Scientists estimate dozens of fungal species are lost annually, unseen and unmourned.",
     tags: ["fungus","mycorrhizal","undocumented"], aiGenerated: false,
     messages: []
   },
@@ -108,7 +108,7 @@ const SEED_EXHIBITS = [
     id: "s13", icon: "🏜️", name: "The Aral Sea", era: "Lost: 2014",
     cat: "land", status: "lost",
     shortDesc: "A sea drained in one generation.",
-    longDesc: "Once the world's fourth-largest lake, the Aral Sea has shrunk to less than 10% of its original volume — a man-made ecological catastrophe executed in living memory. Soviet irrigation projects diverted its two feeder rivers to cotton fields. By 2014, the eastern basin had completely dried. Where fishing boats once sailed, there is now a desert littered with rusted hulls and salt storms that poison the lungs of children.",
+    longDesc: "Once the world's fourth-largest lake, the Aral Sea has shrunk to less than 10% of its original volume, a man-made ecological catastrophe executed in living memory. Soviet irrigation projects diverted its two feeder rivers to cotton fields. By 2014, the eastern basin had completely dried. Where fishing boats once sailed, there is now a desert littered with rusted hulls and salt storms that poison the lungs of children.",
     tags: ["central asia","freshwater","desertification"], aiGenerated: false,
     messages: []
   },
@@ -118,6 +118,22 @@ const SEED_EXHIBITS = [
     shortDesc: "The first extinction driven by climate change.",
     longDesc: "Found only in the Monteverde Cloud Forest of Costa Rica, the brilliant golden toad was last seen in 1989. Scientists now believe that rising temperatures allowed a lethal chytrid fungus to flourish at previously inhospitable elevations. The golden toad became the first species whose extinction was directly attributed to global climate change — a herald of what was to come.",
     tags: ["amphibian","Costa Rica","chytrid"], aiGenerated: false,
+    messages: []
+  },
+    {
+    id: "s15", icon: "🐅", name: "Sumatran tiger", era: "Lost: ~2032",
+    cat: "land", status: "critical",
+    shortDesc: "The last tiger of Sunda — fewer than 400 remain.",
+    longDesc: "The smallest surviving tiger subspecies, confined to the remaining forests of Sumatra. Palm oil plantations and poaching have reduced their habitat by two-thirds since 1985. Each remaining individual is mapped, named, and watched by rangers who know that when the last one falls, an apex predator that shaped Sundanese forests for a million years will vanish forever.",
+    tags: ["Sumatra","apex predator","<400"], aiGenerated: false,
+    messages: []
+  },
+  {
+    id: "s16", icon: "🧊", name: "Mountain glaciers of the tropics", era: "Lost: ~2045",
+    cat: "sensation", status: "critical",
+    shortDesc: "Ice that has stood for 18,000 years — now melting.",
+    longDesc: "The Quelccaya Ice Cap in Peru, the largest tropical ice mass on Earth, has lost 40% of its area since 1970. These glaciers are not just water, they are time capsules, preserving millennia of atmospheric history. Unlike polar ice, tropical glaciers sit at the edge of viability. Once gone, they will not return in any human timeframe. The last generation to see them is alive today.",
+    tags: ["Andes","cryosphere","water source"], aiGenerated: false,
     messages: []
   }
 ];

@@ -3,7 +3,7 @@
   --bark: #4A2E1A;
   --clay: #8B4513;
   --amber: #D4893F;
-  --sand: #E2C28B;
+  --sand: #f9deae;
   --parchment: #F5EDE0;
   --fog: #E8DCC8;
   --moss: #4A5E3A;
@@ -12,12 +12,12 @@
   --ocean-deep: #1A3A4A;
   --ocean-mid: #2E5A6E;
   --ocean-light: #5A9AB0;
-  --ash: #8A8378;
+  --ash: #cac0af;
   --bone: #D4C4A8;
   --ink: #1A1208;
   --critical: #E8954A;
   --endangered: #7A8E62;
-  --lost: #8A8378;
+  --lost: #b3aca0;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -291,7 +291,7 @@ body::before {
 .nominate-btn:disabled { opacity: 0.5; cursor: not-allowed; }
 
 .nominate-hint {
-  font-size: 11px;
+  font-size: 14px;
   color: var(--ash);
   letter-spacing: 0.05em;
 }
@@ -357,7 +357,7 @@ body::before {
 }
 
 .filter-pill {
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   padding: 7px 16px;
@@ -708,16 +708,15 @@ footer {
 
 .powered-by {
   margin-top: 1.5rem;
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0.15em;
   color: var(--ash);
-  opacity: 0.6;
 }
 
 .powered-by span { color: var(--ocean-light); }
 
 .persistence-note {
-  font-size: 9px;
+  font-size: 12px;
   letter-spacing: 0.15em;
   color: var(--ash);
   text-align: center;
