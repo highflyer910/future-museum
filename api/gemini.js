@@ -36,7 +36,8 @@ Respond ONLY with valid JSON, no markdown fences, no explanation text before or 
   "cat": "one of exactly: ocean | land | sky | sensation",
   "shortDesc": "one factual haunting sentence, under 14 words",
   "longDesc": "3-4 sentences. Real data where possible. Archival tone. No solutions.",
-  "tags": ["3 short factual tags"]
+  "tags": ["3 short factual tags"],
+  "wikipediaUrl": "full https://en.wikipedia.org/wiki/... URL for the main subject, or null if none exists"
 }`;
 
   try {

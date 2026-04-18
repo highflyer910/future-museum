@@ -11,7 +11,7 @@
   --sage: #9AAC88;
   --ocean-deep: #1A3A4A;
   --ocean-mid: #2E5A6E;
-  --ocean-light: #5A9AB0;
+  --ocean-light: #71c3de;
   --ash: #cac0af;
   --bone: #D4C4A8;
   --ink: #1A1208;
@@ -683,6 +683,24 @@ body::before {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--ash);
+}
+
+.wiki-link {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--ocean-light);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(90,154,176,0.3);
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.wiki-link:hover {
+  color: var(--sand);
+  border-bottom-color: var(--sand);
 }
 
 footer {
