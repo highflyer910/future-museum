@@ -1,4 +1,3 @@
-// ---------- SEED DATA ----------
 const SEED_EXHIBITS = [
   {
     id: "s1", icon: "🐚", name: "Great Barrier Reef", era: "~2050 projection",
@@ -253,7 +252,6 @@ function renderGallery() {
       <div class="exhibit-tags">${e.tags.map(t => `<span class="tag">${escapeHtml(t)}</span>`).join('')}</div>
       ${wikiLink(e.wikipediaUrl)}
     `;
-    // only the card body triggers lightbox, not the wiki link
     card.addEventListener("click", (ev) => {
       if (ev.target.closest('.wiki-link')) return;
       openExhibit(e.id);
