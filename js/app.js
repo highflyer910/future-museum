@@ -9,7 +9,16 @@ const SEED_EXHIBITS = [
     messages: [{ author: "M. Torres", text: "I dove here years ago. Even then, the silence underwater was wrong — too few fish, too much white." }]
   },
   {
-    id: "s2", icon: "❄️", name: "Arctic summer ice", era: "~2035 projection",
+  id: "s2", icon: "🐧", name: "Emperor penguin", era: "~2073 projection",
+  cat: "land", status: "critical",
+  shortDesc: "Discovered in 1902. Endangered by 2026. A collapse in 124 years.",
+  longDesc: "The first emperor penguin breeding colony was spotted by Robert Falcon Scott at Cape Crozier in 1902. In April 2026, the IUCN officially listed the species as endangered - 124 years from discovery to extinction risk. Their survival depends entirely on sea ice as a stable platform for breeding. As ice declines and becomes unreliable, chicks fall into the ocean before they can swim. Their numbers are expected to halve by 2073.",
+  tags: ["Antarctica","sea ice","IUCN 2026"], aiGenerated: false,
+  wikipediaUrl: "https://en.wikipedia.org/wiki/Emperor_penguin",
+  messages: []
+  },
+  {
+    id: "s3", icon: "❄️", name: "Arctic summer ice", era: "~2035 projection",
     cat: "ocean", status: "critical",
     shortDesc: "The mirror that kept our planet from overheating.",
     longDesc: "For millennia, Arctic sea ice acted as a planetary thermostat — its white surface reflecting solar energy back into space. Each summer that passes, less of it returns. The first fully ice-free Arctic summer is now projected within a decade, a threshold never crossed in the 800,000 years of ice cores we have learned to read.",
@@ -18,7 +27,7 @@ const SEED_EXHIBITS = [
     messages: []
   },
   {
-    id: "s3", icon: "🦋", name: "Monarch migration", era: "~2060 projection",
+    id: "s4", icon: "🦋", name: "Monarch migration", era: "~2060 projection",
     cat: "sky", status: "endangered",
     shortDesc: "Billions of wings navigating by starlight and magnetic fields.",
     longDesc: "Every autumn, hundreds of millions of monarch butterflies departed Canada and the northern United States, flying 4,500 kilometres to a single mountain forest in Michoacán, Mexico — guided by a magnetic compass and the angle of the sun encoded in their genes. Their population has declined by 80% since 1980. The knowledge of the route dies with each generation that does not complete it.",
@@ -27,7 +36,7 @@ const SEED_EXHIBITS = [
     messages: [{ author: "R. Okafor", text: "My grandmother called them 'traveling flowers.' I have never seen a migration." }]
   },
   {
-    id: "s4", icon: "🌫️", name: "Truly dark skies", era: "Lost: 1990s",
+    id: "s5", icon: "🌫️", name: "Truly dark skies", era: "Lost: 1990s",
     cat: "sensation", status: "lost",
     shortDesc: "The Milky Way, as every human saw it for 300,000 years.",
     longDesc: "For the entirety of human existence until roughly 1900, the Milky Way arched across every night sky on Earth. Every religion, every navigational system, every creation myth was written beneath it. Today, one third of humanity — and 80% of North Americans — cannot see it from where they sleep. The sky that shaped our species has been erased by the glow of our own making.",
@@ -36,22 +45,13 @@ const SEED_EXHIBITS = [
     messages: [{ author: "A. Lindqvist", text: "I saw the full Milky Way once, in the Atacama. I wept without meaning to." }]
   },
   {
-    id: "s5", icon: "🐘", name: "African forest elephant", era: "~2040 projection",
+    id: "s6", icon: "🐘", name: "African forest elephant", era: "~2040 projection",
     cat: "land", status: "critical",
     shortDesc: "The gardeners who shaped the Congo for ten million years.",
     longDesc: "Smaller and more elusive than their savanna cousins, forest elephants spent millennia dispersing seeds, carving trails, and knocking down trees to let light reach the forest floor — engineering the entire structure of Central Africa's rainforest. Poaching reduced their population by 86% in just 31 years. The forest they tended is already reshaping itself into something their absence will define.",
     tags: ["Congo","keystone species","poaching"], aiGenerated: false,
     wikipediaUrl: "https://en.wikipedia.org/wiki/African_forest_elephant",
     messages: []
-  },
-  {
-    id: "s6", icon: "🎵", name: "The dawn chorus", era: "Fading: present",
-    cat: "sensation", status: "endangered",
-    shortDesc: "The hour before sunrise when every bird sang at once.",
-    longDesc: "The dawn chorus — that layered explosion of birdsong in the thirty minutes before sunrise — has grown measurably quieter within a single human lifetime. North America alone has lost three billion birds since 1970. The specific acoustic texture of a spring morning that your grandparents knew, that particular fullness of sound — does not exist in the same form today. It is leaving slowly, in the way that light leaves a room.",
-    tags: ["birdsong","soundscape","3 billion birds lost"], aiGenerated: false,
-    wikipediaUrl: "https://en.wikipedia.org/wiki/Dawn_chorus_(birds)",
-    messages: [{ author: "P. Sharma", text: "My father used to wake at 5am just to listen. He said it was better than any music." }]
   },
   {
     id: "s7", icon: "🌊", name: "Vaquita porpoise", era: "Lost: ~2026",
