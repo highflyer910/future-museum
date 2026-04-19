@@ -733,6 +733,12 @@ footer {
 
 .powered-by span { color: var(--ocean-light); }
 
+.powered-by a{
+  color: var(--ocean-light);
+  text-decoration: none;
+  font-weight: 500;
+}
+
 .persistence-note {
   font-size: 12px;
   letter-spacing: 0.15em;
