@@ -6,9 +6,7 @@ const SEED_EXHIBITS = [
     longDesc: "Stretching 2,300 kilometres along the Australian coast, the reef once sheltered over 1,500 species of fish and 4,000 types of mollusc. Bleaching events, driven by waters growing warmer each decade, have stripped entire regions of their colour and life. Scientists who have studied it for a lifetime now speak of it in the past tense.",
     tags: ["coral","biodiversity","1,500 species"], aiGenerated: false,
     wikipediaUrl: "https://en.wikipedia.org/wiki/Great_Barrier_Reef",
-    messages: [
-      { author: "M. Torres", text: "I dove here years ago. Even then, the silence underwater was wrong — too few fish, too much white." }
-    ]
+    messages: [{ author: "M. Torres", text: "I dove here years ago. Even then, the silence underwater was wrong — too few fish, too much white." }]
   },
   {
     id: "s2", icon: "❄️", name: "Arctic summer ice", era: "~2035 projection",
@@ -26,9 +24,7 @@ const SEED_EXHIBITS = [
     longDesc: "Every autumn, hundreds of millions of monarch butterflies departed Canada and the northern United States, flying 4,500 kilometres to a single mountain forest in Michoacán, Mexico — guided by a magnetic compass and the angle of the sun encoded in their genes. Their population has declined by 80% since 1980. The knowledge of the route dies with each generation that does not complete it.",
     tags: ["insect","migration","Mexico"], aiGenerated: false,
     wikipediaUrl: "https://en.wikipedia.org/wiki/Monarch_butterfly_migration",
-    messages: [
-      { author: "R. Okafor", text: "My grandmother called them 'traveling flowers.' I have never seen a migration." }
-    ]
+    messages: [{ author: "R. Okafor", text: "My grandmother called them 'traveling flowers.' I have never seen a migration." }]
   },
   {
     id: "s4", icon: "🌫️", name: "Truly dark skies", era: "Lost: 1990s",
@@ -37,9 +33,7 @@ const SEED_EXHIBITS = [
     longDesc: "For the entirety of human existence until roughly 1900, the Milky Way arched across every night sky on Earth. Every religion, every navigational system, every creation myth was written beneath it. Today, one third of humanity — and 80% of North Americans — cannot see it from where they sleep. The sky that shaped our species has been erased by the glow of our own making.",
     tags: ["light pollution","starlight","urban sprawl"], aiGenerated: false,
     wikipediaUrl: "https://en.wikipedia.org/wiki/Light_pollution",
-    messages: [
-      { author: "A. Lindqvist", text: "I saw the full Milky Way once, in the Atacama. I wept without meaning to." }
-    ]
+    messages: [{ author: "A. Lindqvist", text: "I saw the full Milky Way once, in the Atacama. I wept without meaning to." }]
   },
   {
     id: "s5", icon: "🐘", name: "African forest elephant", era: "~2040 projection",
@@ -57,9 +51,7 @@ const SEED_EXHIBITS = [
     longDesc: "The dawn chorus — that layered explosion of birdsong in the thirty minutes before sunrise — has grown measurably quieter within a single human lifetime. North America alone has lost three billion birds since 1970. The specific acoustic texture of a spring morning that your grandparents knew, that particular fullness of sound — does not exist in the same form today. It is leaving slowly, in the way that light leaves a room.",
     tags: ["birdsong","soundscape","3 billion birds lost"], aiGenerated: false,
     wikipediaUrl: "https://en.wikipedia.org/wiki/Dawn_chorus_(birds)",
-    messages: [
-      { author: "P. Sharma", text: "My father used to wake at 5am just to listen. He said it was better than any music." }
-    ]
+    messages: [{ author: "P. Sharma", text: "My father used to wake at 5am just to listen. He said it was better than any music." }]
   },
   {
     id: "s7", icon: "🌊", name: "Vaquita porpoise", era: "Lost: ~2026",
@@ -153,7 +145,7 @@ const SEED_EXHIBITS = [
   }
 ];
 
-// ---------- GLOBAL STATE ----------
+// -------- GLOBAL STATE -------
 let exhibits = [];
 let activeFilter = "all";
 let guestbookMessages = {};
@@ -168,13 +160,10 @@ function escapeHtml(str) {
   });
 }
 
-// ---------- LOCALSTORAGE ----------
+// ---------- LOCALSTORAGE -------
 function saveToLocalStorage() {
   const dataToSave = {
-    exhibits: exhibits.map(e => ({
-      ...e,
-      messages: guestbookMessages[e.id] || []
-    })),
+    exhibits: exhibits.map(e => ({ ...e, messages: guestbookMessages[e.id] || [] })),
     guestbookMessages: guestbookMessages
   };
   localStorage.setItem('museum_exhibits', JSON.stringify(dataToSave));
@@ -189,9 +178,7 @@ function loadFromLocalStorage() {
       exhibits = data.exhibits;
       guestbookMessages = data.guestbookMessages || {};
       exhibits.forEach(e => {
-        if (!guestbookMessages[e.id]) {
-          guestbookMessages[e.id] = e.messages || [];
-        }
+        if (!guestbookMessages[e.id]) guestbookMessages[e.id] = e.messages || [];
       });
       return true;
     }
@@ -207,7 +194,7 @@ if (!loadFromLocalStorage()) {
   });
 }
 
-// ---------- HELPERS ----------
+// ---------- HELPERS -------
 function getStatusClass(s) {
   return s === "critical" ? "critical" : s === "lost" ? "lost" : "endangered";
 }
@@ -218,7 +205,7 @@ function getStatusLabel(s) {
 
 function wikiLink(url) {
   if (!url) return '';
-  return `<a class="wiki-link" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">↗ Wikipedia</a>`;
+  return `<a class="wiki-link" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">↗ Historical reference</a>`;
 }
 
 function updateStats() {
@@ -228,42 +215,82 @@ function updateStats() {
   document.getElementById("stat-ai").textContent = exhibits.filter(e => e.aiGenerated).length;
 }
 
-// ---------- GALLERY ----------
-function renderGallery() {
+// ---------- GALLERY ------
+function renderGallery(isFilterChange = false) {
   const grid = document.getElementById("gallery-grid");
   const filtered = activeFilter === "all" ? exhibits
     : activeFilter === "visitor" ? exhibits.filter(e => e.aiGenerated)
     : exhibits.filter(e => e.cat === activeFilter);
 
-  grid.innerHTML = "";
-  filtered.forEach(e => {
-    const card = document.createElement("div");
-    card.className = "exhibit-card" + (e.isNew ? " is-new" : "");
-    card.innerHTML = `
-      ${e.aiGenerated ? '<span class="ai-badge">Visitor submission</span>' : ''}
-      <span class="exhibit-icon">${escapeHtml(e.icon)}</span>
-      <div class="exhibit-status">
-        <div class="status-dot ${getStatusClass(e.status)}"></div>
-        <span class="status-text ${getStatusClass(e.status)}">${getStatusLabel(e.status)}</span>
-      </div>
-      <h3 class="exhibit-name">${escapeHtml(e.name)}</h3>
-      <p class="exhibit-era">${escapeHtml(e.era)}</p>
-      <p class="exhibit-desc">${escapeHtml(e.shortDesc)}</p>
-      <div class="exhibit-tags">${e.tags.map(t => `<span class="tag">${escapeHtml(t)}</span>`).join('')}</div>
-      ${wikiLink(e.wikipediaUrl)}
-    `;
-    card.addEventListener("click", (ev) => {
-      if (ev.target.closest('.wiki-link')) return;
-      openExhibit(e.id);
-    });
-    grid.appendChild(card);
-    if (e.isNew) setTimeout(() => { e.isNew = false; saveToLocalStorage(); }, 700);
-  });
+  ScrollTrigger.getAll()
+    .filter(st => st.trigger && st.trigger.classList.contains('exhibit-card'))
+    .forEach(st => st.kill());
 
-  updateStats();
+  const buildCards = () => {
+    grid.innerHTML = "";
+    filtered.forEach(e => {
+      const card = document.createElement("div");
+      card.className = "exhibit-card" + (e.isNew ? " is-new" : "");
+      card.innerHTML = `
+        ${e.aiGenerated ? '<span class="ai-badge">Visitor submission</span>' : ''}
+        <span class="exhibit-icon">${escapeHtml(e.icon)}</span>
+        <div class="exhibit-status">
+          <div class="status-dot ${getStatusClass(e.status)}"></div>
+          <span class="status-text ${getStatusClass(e.status)}">${getStatusLabel(e.status)}</span>
+        </div>
+        <h3 class="exhibit-name">${escapeHtml(e.name)}</h3>
+        <p class="exhibit-era">${escapeHtml(e.era)}</p>
+        <p class="exhibit-desc">${escapeHtml(e.shortDesc)}</p>
+        <div class="exhibit-tags">${e.tags.map(t => `<span class="tag">${escapeHtml(t)}</span>`).join('')}</div>
+        ${wikiLink(e.wikipediaUrl)}
+      `;
+      card.addEventListener("click", (ev) => {
+        if (ev.target.closest('.wiki-link')) return;
+        openExhibit(e.id);
+      });
+      grid.appendChild(card);
+      if (e.isNew) setTimeout(() => { e.isNew = false; saveToLocalStorage(); }, 700);
+    });
+
+    updateStats();
+
+    const cards = grid.querySelectorAll('.exhibit-card');
+
+    if (isFilterChange) {
+      gsap.fromTo(cards,
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out', stagger: { each: 0.05, from: 'start' } }
+      );
+    } else {
+      cards.forEach(card => {
+        gsap.from(card, {
+          scrollTrigger: { trigger: card, start: 'top 85%', toggleActions: 'play none none reverse' },
+          opacity: 0,
+          y: 40,
+          duration: 0.6,
+          ease: 'power2.out'
+        });
+      });
+    }
+  };
+
+  if (isFilterChange) {
+    gsap.to(grid, {
+      opacity: 0,
+      y: 8,
+      duration: 0.15,
+      ease: 'power2.in',
+      onComplete: () => {
+        gsap.set(grid, { opacity: 1, y: 0 });
+        buildCards();
+      }
+    });
+  } else {
+    buildCards();
+  }
 }
 
-// ---------- LIGHTBOX ----------
+// ------ LIGHTBOX -------
 function openExhibit(id) {
   const e = exhibits.find(x => x.id === id);
   if (!e) return;
@@ -351,14 +378,14 @@ function closeLightboxBtn() {
   }, 300);
 }
 
-// ---------- FILTERS ----------
+// ------ FILTERS -----
 document.getElementById("filter-pills").addEventListener("click", e => {
   const pill = e.target.closest(".filter-pill");
   if (!pill) return;
   activeFilter = pill.dataset.cat;
   document.querySelectorAll(".filter-pill").forEach(p => p.classList.remove("active"));
   pill.classList.add("active");
-  renderGallery();
+  renderGallery(true); 
 });
 
 function showError(msg) {
@@ -367,7 +394,7 @@ function showError(msg) {
   el.classList.add("visible");
 }
 
-// ---------- NOMINATION ----------
+// ---------- NOMINATION -----
 async function submitNomination() {
   const input = document.getElementById("nominate-input");
   const btn = document.getElementById("nominate-btn");
@@ -447,24 +474,9 @@ window.submitMessage = submitMessage;
 window.closeLightbox = closeLightbox;
 window.closeLightboxBtn = closeLightboxBtn;
 
-renderGallery();
-
-// ---------- GSAP ----------
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.utils.toArray('.exhibit-card').forEach(card => {
-  gsap.from(card, {
-    scrollTrigger: {
-      trigger: card,
-      start: 'top 85%',
-      toggleActions: 'play none none reverse'
-    },
-    opacity: 0,
-    y: 40,
-    duration: 0.6,
-    ease: 'power2.out'
-  });
-});
+renderGallery();
 
 gsap.to('.ring', {
   scale: 1.05,
