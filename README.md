@@ -3,7 +3,7 @@
 > *It is the year 2100. You are standing in a digital archive built by those who remembered.*
 > *This is what they chose to preserve.*
 
-**[→ Visit the Museum](https://museumofuture.vercel.app/)**
+**[→ Visit the Museum](https://futuremuseum.vercel.app/)**
 
 Built for the [DEV Earth Day Challenge 2026](https://dev.to/challenges/weekend-2026-04-16) - a contemplative digital museum set in the year 2100, where the exhibits are the species, places, sounds, and sensations that humanity lost during the Anthropocene. Visitors can nominate what *they* are afraid we will lose, and an AI curator - powered by Google Gemini - writes a scientifically-grounded permanent exhibit for each one.
 
@@ -27,10 +27,12 @@ The Gemini integration isn't decorative. When a visitor nominates something, *"t
 ---
 
 ## How the Gemini Integration Works
-
-A visitor types anything: a word, a phrase, a short sentence. *"Fireflies."* *"The sound of my grandmother's forest."* Gemini receives that as a nomination and generates a full museum exhibit: a name, an era, a conservation status, a short description, a longer archival story, and category tags.
-
-The result renders as a new card in the gallery, permanent for the session.
+ 
+### Nominate an exhibit
+A visitor types anything — a word, a phrase, a short sentence. *"Fireflies."* *"The sound of my grandmother's forest."* Gemini receives that as a nomination and generates a full museum exhibit: a name, an era, a conservation status, a short description, a longer archival story, and category tags. The result renders as a new card in the gallery, permanent for the session.
+ 
+### Ask the Curator
+A floating button — *🏛 Ask the Curator* — opens a conversation with the museum's archivist. It is the year 2100. The curator has kept these records for years and speaks entirely in the past tense, because everything is already gone. Ask what the last monarch butterfly sighting looked like. Ask how humans reacted when the reef died. Ask what a dawn chorus sounded like.
 
 ---
 

@@ -11,7 +11,7 @@
   --sage: #9AAC88;
   --ocean-deep: #1A3A4A;
   --ocean-mid: #2E5A6E;
-  --ocean-light: #5A9AB0;
+  --ocean-light: #71c3de;
   --ash: #cac0af;
   --bone: #D4C4A8;
   --ink: #1A1208;
@@ -685,6 +685,24 @@ body::before {
   color: var(--ash);
 }
 
+.wiki-link {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--ocean-light);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(90,154,176,0.3);
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.wiki-link:hover {
+  color: var(--sand);
+  border-bottom-color: var(--sand);
+}
+
 footer {
   border-top: 1px solid rgba(212,169,106,0.08);
   padding: 3rem 2rem;
@@ -715,6 +733,12 @@ footer {
 
 .powered-by span { color: var(--ocean-light); }
 
+.powered-by a{
+  color: var(--ocean-light);
+  text-decoration: none;
+  font-weight: 500;
+}
+
 .persistence-note {
   font-size: 12px;
   letter-spacing: 0.15em;
@@ -732,4 +756,64 @@ footer {
   .nominate-input { border-right: 1px solid rgba(212,169,106,0.3); }
   .stats-bar { flex-wrap: wrap; }
   .stat-item { min-width: 100px; }
+}
+
+@media (max-width: 480px) {
+  .lightbox {
+    margin: 0;
+    width: 100%;
+  }
+
+  .lightbox-close {
+    position: static;
+    width: 100%;
+    justify-content: flex-end;
+    padding: 1rem 1.5rem 0;
+    background: var(--bark);
+    border-bottom: 1px solid rgba(212,169,106,0.1);
+    margin-bottom: 0;
+  }
+
+  .lightbox-overlay {
+    padding: 0;
+    align-items: flex-start;
+  }
+
+  .lightbox-inner {
+    border-left: none;
+    border-right: none;
+    border-top: none;
+  }
+
+  .lightbox-header {
+    padding: 1.5rem;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .lightbox-body {
+    padding: 1.5rem;
+  }
+
+  .guestbook {
+    padding: 1.5rem;
+  }
+
+  .guestbook-compose {
+    flex-direction: column;
+  }
+
+  .guestbook-input {
+    border-right: 1px solid rgba(212,169,106,0.2);
+    border-bottom: none;
+  }
+
+  .guestbook-submit {
+    padding: 12px;
+    text-align: center;
+  }
+
+  .lightbox-title {
+    font-size: 1.6rem;
+  }
 }
